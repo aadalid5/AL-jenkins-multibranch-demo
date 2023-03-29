@@ -1,12 +1,10 @@
 pipeline {
     agent any
-    tools {nodejs 'node'}
 
     stages {
-        stage('node version'){
+        stage('hello world'){
             steps {
-                sh "node -v"
-                sh "npm -v" 
+                echo "hello"
             }
         }
     }
