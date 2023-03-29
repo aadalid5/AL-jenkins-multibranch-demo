@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('node version'){
             steps {
+                sh "ldd --version"
                 sh "node -v"
             }
         }
