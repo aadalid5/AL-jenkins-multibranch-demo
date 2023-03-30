@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tools {node 'Node v18.x'}
+    tools {nodejs 'Node v18.x'}
 
     stages {
         stage('install'){
