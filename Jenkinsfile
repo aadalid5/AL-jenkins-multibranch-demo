@@ -1,10 +1,18 @@
 pipeline {
     agent any
+    tools {node 'Node v18.x'}
 
     stages {
-        stage('hello world'){
+        stage('install'){
             steps {
-                echo "hello patch teo"
+                sh "node -v"
+                sh "npm ci"
+            }
+        }
+
+        stage('Code analysis'){
+            steps{
+                sh "npm run lint:js"
             }
         }
     }
