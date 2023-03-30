@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('hello world'){
             steps {
-                echo "hello patch two"
+                sh "exit 1"
             }
         }
     }
