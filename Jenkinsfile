@@ -11,8 +11,18 @@ pipeline {
         }
 
         stage('Code analysis'){
+            parallel {
+                stage('style scan') {
+                    steps{
+                        sh "npm run lint:js"
+                    }
+                }
+            }
+        }
+
+        stage('Tests') {
             steps{
-                sh "npm run lint:js"
+                sh "npm run test"
             }
         }
     }
