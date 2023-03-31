@@ -6,7 +6,6 @@ pipeline {
         stage('install'){
             steps {
                 sh "node -v"
-                sh "npm -v"
                 sh "npm ci"
             }
         }
