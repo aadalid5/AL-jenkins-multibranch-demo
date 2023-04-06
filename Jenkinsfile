@@ -3,7 +3,7 @@ pipeline {
     tools {nodejs 'Node v18.x'}
 
     stages {
-        stage('install'){
+        stage('Install Dependencies'){
             steps {
                 sh "node -v"
                 sh "npm ci"
@@ -12,9 +12,9 @@ pipeline {
 
         stage('Code analysis'){
             parallel {
-                stage('style scan') {
+                stage('Code Style Scan') {
                     steps{
-                        sh "npm run lint:js"
+                        sh "npm run lint"
                     }
                 }
             }
