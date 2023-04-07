@@ -1,5 +1,3 @@
-def check_runs = new com.functions.buildGithubCheckScript()
-
 pipeline {
     agent any
     tools {nodejs 'Node v18.x'}
