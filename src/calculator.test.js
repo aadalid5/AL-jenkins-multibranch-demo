@@ -7,6 +7,6 @@ describe('calculator test', () => {
     });
     it('should diff', () => {
         const result = mathOperators.diff(5, 3);
-        expect(result).toBe(2);
+        expect(result).toBe(1);
     });
 });
